@@ -2,6 +2,8 @@
 title: Test1
 date: 2024-11-19
 author: Your Name
+cell_count: 4
+score: 0
 ---
 
 ```python
@@ -36,3 +38,7 @@ thisdict.pop("age")
 ```python
 
 ```
+
+
+---
+**Score: 0**
