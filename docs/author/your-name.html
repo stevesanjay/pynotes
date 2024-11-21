@@ -193,7 +193,7 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
+                <a href="https://stevesanjay.github.io/pynotes/age-calc.html"><h3 class="article-title">Age-Calc</h3></a>
 <h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
 </h6>
 
@@ -209,26 +209,110 @@
     <span class="k">return</span> <span class="n">year</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2002</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">age</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">33</span>
+<div class="highlight"><pre><span></span><code><span class="mf">21</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/age-calculator.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/age-calc.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/args-basics-123.html"><h3 class="article-title">Args-Basics-123</h3></a>
+<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">thing</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">. </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">thing</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">print_everything</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;spinach&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.</span><span class="w"> </span><span class="n">apple</span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">banana</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">cabbage</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">spinach</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/args-basics-123.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/args1.html"><h3 class="article-title">Args1</h3></a>
+<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">thing</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">. </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">thing</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">print_everything</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;spinach&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.</span><span class="w"> </span><span class="n">apple</span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">banana</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">cabbage</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">spinach</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/args1.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -241,17 +325,29 @@
 </h6>
 
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aa&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;bb&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;cc&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;dd&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code>{&#39;aa&#39;: 3, &#39;bb&#39;: 4, &#39;cc&#39;: 2, &#39;dd&#39;: 1}
 </code></pre></div>
 
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">s</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;bb&#39;, 4), (&#39;aa&#39;, 3), (&#39;cc&#39;, 2), (&#39;dd&#39;, 1)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>bb …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
 
 </p>
 
@@ -301,50 +397,203 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/test1.html"><h3 class="article-title">Test1</h3></a>
+                <a href="https://stevesanjay.github.io/pynotes/basic-dict.html"><h3 class="article-title">Basic-Dict</h3></a>
 <h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>hello world
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_age</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">months</span> <span class="o">=</span> <span class="p">(</span><span class="n">d1</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">d</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">+</span> <span class="n">d1</span><span class="o">.</span><span class="n">month</span> <span class="o">-</span> <span class="n">d</span><span class="o">.</span><span class="n">month</span>
+
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">months</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">year</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">thisdict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;steve&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
-  <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">1964</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">thisdict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">age</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">40</span>
+<div class="highlight"><pre><span></span><code><span class="mf">33</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/test1.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-dict.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-else-forloop12.html"><h3 class="article-title">Basic-Else-Forloop12</h3></a>
+<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">digits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">digits</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 5]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no item left&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">1</span>
+<span class="mf">5</span>
+<span class="n">no</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">left</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-else-forloop12.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-forloop123.html"><h3 class="article-title">Basic-Forloop123</h3></a>
+<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">digits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">digits</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 2, 7, 8, 9]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">7</span>
+<span class="mf">8</span>
+<span class="mf">9</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">even_digits</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">digits</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">even_digits</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 2, 8]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-forloop123.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-glob.html"><h3 class="article-title">Basic Glob</h3></a>
+<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;steve&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">12</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;steve&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="c1">#global x //commenting </span>
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">foo</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>stevesteve
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-glob.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 5</h6>
 
 <p>
 
+        <a href="https://stevesanjay.github.io/pynotes/author/your-name2.html">Next &raquo;</a>
 </p>
 </div>
 
@@ -362,9 +611,19 @@
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
    
         </ul>
 

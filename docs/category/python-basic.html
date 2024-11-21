@@ -51,17 +51,39 @@
 </h6>
 
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aa&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;bb&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;cc&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;dd&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">d</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;aa&#39;: 3, &#39;bb&#39;: 4, &#39;cc&#39;: 2, &#39;dd&#39;: 1}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">s</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;bb&#39;, 4), (&#39;aa&#39;, 3), (&#39;cc&#39;, 2), (&#39;dd&#39;, 1)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>bb 4
+aa 3
+cc 2
+dd 1
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
 
 </p>
 
@@ -138,9 +160,19 @@
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
    
         </ul>
 
