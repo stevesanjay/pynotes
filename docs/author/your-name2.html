@@ -183,6 +183,92 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/callable-attr.html"><h3 class="article-title">Callable-Attr</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Access a Callable Attribute</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="n">get</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Calculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">calc</span> <span class="o">=</span> <span class="n">Calculator</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Access and call a method</span>
+<span class="n">add_method</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">calc</span><span class="p">,</span> <span class="s2">&quot;add&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">add_method</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">8</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/callable-attr.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/complex-check.html"><h3 class="article-title">Complex-Check</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Check Attribute in a Complex Structure</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">magicattr</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">magicattr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.1.6</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="n">get</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/complex-check.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/count-func.html"><h3 class="article-title">Count-Func</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -211,6 +297,48 @@
 
 
                 <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/count-func.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/count-word.html"><h3 class="article-title">Count-Word</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Count the Number of Words in a File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\w+\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">word_count</span> <span class="o">=</span> <span class="n">count_words</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of words: </span><span class="si">{</span><span class="n">word_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Number of words …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/count-word.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -346,165 +474,9 @@ None …</code></pre></div><p class="subheader">Category: <a href="https://steve
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/delete-data.html"><h3 class="article-title">Delete-Data</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_data_from_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-
-    <span class="n">dfs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">!=</span> <span class="s1">&#39;sanjay&#39;</span><span class="p">]</span>
-
-    <span class="n">dfs</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">dfs</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">delete_data_from_excel</span><span class="p">(</span><span class="s2">&quot;data.xlsx&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>age</th>
-      <th>city</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>steve</td>
-      <td>25 …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/delete-data.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/dynamic-set.html"><h3 class="article-title">Dynamic-Set</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Set Attributes Dynamically in a Class</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="nb">set</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Bob
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/dynamic-set.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/e-customeexcept.html"><h3 class="article-title">E-Customeexcept</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="mi">18</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
-    <span class="n">input_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number :&quot;</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">input_number</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">InvalidAgeException</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;your age </span><span class="si">{</span><span class="n">input_number</span><span class="si">}</span><span class="s2"> is eligible to vote &quot;</span><span class="p">)</span>
-
-<span class="k">except</span> <span class="n">InvalidAgeException</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;exception occured : invalid Age&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Enter a number : 20
-
-
-your age 20 is eligible to vote
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/e-customeexcept.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 6</h6>
+<h6 class="subheader">Page 2 of 7</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/author/your-name.html">&laquo; Prev</a>
@@ -541,6 +513,7 @@ your age 20 is eligible to vote
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
    
         </ul>
 
