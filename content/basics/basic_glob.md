@@ -1,6 +1,6 @@
 ---
 title: Basic Glob
-date: 2024-11-21
+date: 2024-11-22
 author: Your Name
 cell_count: 6
 score: 5

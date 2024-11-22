@@ -46,8 +46,65 @@
         
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/access-nested.html"><h3 class="article-title">Access-Nested</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Access Nested Attributes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="n">get</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Address</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">address</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="s2">&quot;coimbatore&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">person</span>  <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;steve&quot;</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">city</span>  <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="s2">&quot;address.city&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">city</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;coimbatore&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/add-a-new-column.html"><h3 class="article-title">Add-A-New-Column</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -89,112 +146,22 @@
         vertical-align: top;
     }
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Toronto</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Montreal</td>
-      <td>70</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Waterloo</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>points</th>
-      <th>code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Toronto</td>
-      <td>80</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Montreal</td>
-      <td>70</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Waterloo</td>
-      <td>90</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a>
+    .dataframe thead th …</style></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a>
 
 </p>
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/add-a-new-column.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/age-calc.html"><h3 class="article-title">Age-Calc</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -237,7 +204,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/args-basics-123.html"><h3 class="article-title">Args-Basics-123</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -279,7 +246,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/args1.html"><h3 class="article-title">Args1</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -321,7 +288,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/argsparse.html"><h3 class="article-title">Argsparse</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -362,7 +329,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-append.html"><h3 class="article-title">Basic-Append</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -398,7 +365,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-dict.html"><h3 class="article-title">Basic-Dict</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -441,7 +408,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-else-forloop12.html"><h3 class="article-title">Basic-Else-Forloop12</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -488,7 +455,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-forloop123.html"><h3 class="article-title">Basic-Forloop123</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -536,60 +503,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/basic-glob.html"><h3 class="article-title">Basic Glob</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;steve&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">x</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">12</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">y</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;steve&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="c1">#global x //commenting </span>
-    <span class="n">xy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">foo</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>stevesteve
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-glob.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 5</h6>
+<h6 class="subheader">Page 1 of 6</h6>
 
 <p>
 
@@ -620,6 +536,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>

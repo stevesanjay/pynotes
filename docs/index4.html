@@ -47,8 +47,134 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/func-kwargs.html"><h3 class="article-title">Func-Kwargs</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">name</span> 
+    <span class="n">full_name</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="n">full_name</span>
+    <span class="c1"># for key,value in name.items():</span>
+    <span class="c1">#     print(f&quot;{key}: {value}&quot;)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">display_info</span><span class="p">(</span><span class="s2">&quot;steve&quot;</span><span class="p">,</span> <span class="s2">&quot;sanjay&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;stevesanjay&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">display_info</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;steve&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;coimbatore&quot;</span><span class="p">,</span> <span class="n">fullname</span><span class="o">=</span><span class="s2">&quot;stevesanjay&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">steve</span>
+<span class="n">age …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/func-kwargs.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/func-sum.html"><h3 class="article-title">Func-Sum</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># global variable</span>
+<span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">my_num</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">my_num</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">66</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sum_value</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sum_value</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">66</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/func-sum.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/func1-args-kwargs.html"><h3 class="article-title">Func1 Args Kwargs</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;args:</span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">print_value</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;steve&quot;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;sanjay&quot;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">args</span><span class="o">:</span><span class="mi">1</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">2</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">3</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">4</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">5</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">6</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">7</span>
+<span class="n">args …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/func1-args-kwargs.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/func2-exception.html"><h3 class="article-title">Func2 Exception</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -95,7 +221,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/func3-forloop.html"><h3 class="article-title">Func3 Forloop</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -128,7 +254,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/funcargs.html"><h3 class="article-title">Funcargs</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -174,7 +300,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/funct-regex-.html"><h3 class="article-title">Funct-Regex-</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -213,7 +339,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/glob-vari.html"><h3 class="article-title">Glob Vari</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -268,7 +394,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/kwargs-basics.html"><h3 class="article-title">Kwargs-Basics</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -303,7 +429,7 @@ enter a number : 4
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/lamb2-sort.html"><h3 class="article-title">Lamb2-Sort</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
@@ -333,118 +459,9 @@ enter a number : 4
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lamb3-filter.html"><h3 class="article-title">Lamb3-Filter</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lamb3-filter.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lambda-even.html"><h3 class="article-title">Lambda-Even</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lambda-even.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/random-find-even-odd.html"><h3 class="article-title">Random-Find-Even-Odd</h3></a>
-<h6 class="subheader" title="2024-11-21T00:00:00-05:00">Thu 21 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_odd</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is odd number&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is even number&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">c_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-        <span class="n">is_odd</span><span class="p">(</span><span class="n">c_number</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">1617</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">odd</span><span class="w"> </span><span class="n">number</span>
-<span class="mf">1172</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">even</span><span class="w"> </span><span class="n">number</span>
-<span class="mf">1545</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">odd …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/random-find-even-odd.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 4 of 5</h6>
+<h6 class="subheader">Page 4 of 6</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/index3.html">&laquo; Prev</a>
@@ -476,6 +493,7 @@ enter a number : 4
             <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
