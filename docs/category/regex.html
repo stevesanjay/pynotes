@@ -193,6 +193,99 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/find123-hexa.html"><h3 class="article-title">Find123-Hexa</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Extract All Hexadecimal Values</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_hex_values</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">hex_values</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b0[xX][0-9a-fA-F]+\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">hex_values</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">hex_values</span> <span class="o">=</span> <span class="n">extract_hex_values</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hexadecimal values found:&quot;</span><span class="p">,</span> <span class="n">hex_values</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hexadecimal values found: []
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/find123-hexa.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/find23-capital-letter.html"><h3 class="article-title">Find23-Capital-Letter</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Extract All Capitalized Words</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_capitalized_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">capitalized_words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b[A-Z][a-z]*\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">capitalized_words</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">capitalized_words</span> <span class="o">=</span> <span class="n">extract_capitalized_words</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Capitalized words found:&quot;</span><span class="p">,</span> <span class="n">capitalized_words</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Capitalized words found: [&#39;Hello&#39;, &#39;I&#39;, &#39;Here&#39;, &#39;Check&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/find23-capital-letter.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/match-url.html"><h3 class="article-title">Match-Url</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -287,6 +380,47 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/remove-extra-space.html"><h3 class="article-title">Remove-Extra-Space</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Find and Remove Extra Whitespaces</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Extra spaces removed.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Extra spaces removed …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/remove-extra-space.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/replace-phone.html"><h3 class="article-title">Replace-Phone</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -319,12 +453,50 @@
                 <hr  class="gradient"/>
             </article>
 
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/replace-space.html"><h3 class="article-title">Replace-Space</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Match and Replace Multiple Spaces with a Single Space</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replace_multiple_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Multiple spaces replaced with a single space.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/replace-space.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 2</h6>
 
 <p>
 
+        <a href="https://stevesanjay.github.io/pynotes/category/regex2.html">Next &raquo;</a>
 </p>
 </div>
 

@@ -47,6 +47,90 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/func1-args-kwargs.html"><h3 class="article-title">Func1 Args Kwargs</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_value</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;args:</span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">kwargs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">print_value</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;steve&quot;</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;sanjay&quot;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">args</span><span class="o">:</span><span class="mi">1</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">2</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">3</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">4</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">5</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">6</span>
+<span class="n">args</span><span class="o">:</span><span class="mi">7</span>
+<span class="n">args …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/func1-args-kwargs.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/func2-exception.html"><h3 class="article-title">Func2 Exception</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">divided_number</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;cannot divided by zero&quot;</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter a number :&quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter a number :&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>enter a number : 1
+enter a number : 4
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">divided_number</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/func2-exception.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/func3-forloop.html"><h3 class="article-title">Func3 Forloop</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -373,88 +457,6 @@
 
 
                 <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lamb3-filter.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lambda-even.html"><h3 class="article-title">Lambda-Even</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lambda-even.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/match-url.html"><h3 class="article-title">Match-Url</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Match URLs in a File</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_urls</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">urls</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https?://[^\s]+&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">urls</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">urls</span> <span class="o">=</span> <span class="n">extract_urls</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;URLs found:&quot;</span><span class="p">,</span> <span class="n">urls</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>URLs found: [&#39;https://www.example.com&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/match-url.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 

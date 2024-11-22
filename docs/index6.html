@@ -47,6 +47,88 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/lambda-even.html"><h3 class="article-title">Lambda-Even</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lambda-even.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/match-url.html"><h3 class="article-title">Match-Url</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Match URLs in a File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_urls</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">urls</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https?://[^\s]+&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">urls</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">urls</span> <span class="o">=</span> <span class="n">extract_urls</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;URLs found:&quot;</span><span class="p">,</span> <span class="n">urls</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>URLs found: [&#39;https://www.example.com&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/match-url.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/match123-all-no.html"><h3 class="article-title">Match123-All-No</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -328,6 +410,47 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/remove-extra-space.html"><h3 class="article-title">Remove-Extra-Space</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Find and Remove Extra Whitespaces</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Extra spaces removed.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Extra spaces removed …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/remove-extra-space.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/replace-phone.html"><h3 class="article-title">Replace-Phone</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -357,144 +480,6 @@
 
 
                 <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/replace-phone.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/sample2-func.html"><h3 class="article-title">Sample2-Func</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;positive&#39;</span>
-    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;negative&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;zero&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;positive&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;zero&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;negative&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/sample2-func.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/set-nested.html"><h3 class="article-title">Set-Nested</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="nb">set</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Theme</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">theme</span> <span class="o">=</span> <span class="n">Theme</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="s2">&quot;theme.color&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">theme</span><span class="o">.</span><span class="n">color</span><span class="p">)</span> 
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>red
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/set-nested.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/simple3-function.html"><h3 class="article-title">Simple3-Function</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">return_none</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this function written none&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s2">&quot;steve&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">return_none</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>this function written none
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>steve
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/simple3-function.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 

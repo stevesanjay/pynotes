@@ -1,3 +1,1 @@
-Hello, my email is john.doe@example.com, and I can be reached at PHONE_NUMBER. 
-Here are some important dates: 12/05/2024, 25/12/2024.
-Check out our website at https://www.example.com for more information.
+Hello, my email is john.doe@example.com, and I can be reached at PHONE_NUMBER. Here are some important dates: 12/05/2024, 25/12/2024. Check out our website at https://www.example.com for more information.
