@@ -1,15 +1,25 @@
 ---
 title: Args-Basics-123
-date: 2024-11-22
+date: 2024-11-23
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 7
+score: 5
 ---
+
+```python
+# reading data by using the args.
+```
+
 
 ```python
 def print_everything(*args):
         for count, thing in enumerate(args):
             print( '{0}. {1}'.format(count, thing))
+```
+
+
+```python
+# read the data from the print_everything method 
 ```
 
 
@@ -20,8 +30,7 @@ def main():
 
 
 ```python
-if __name__ == '__main__':
-    main()
+main()
 ```
 
     0. apple
@@ -32,9 +41,14 @@ if __name__ == '__main__':
 
 
 ```python
+print_everything()
+```
+
+
+```python
 
 ```
 
 
 ---
-**Score: 0**
+**Score: 5**
