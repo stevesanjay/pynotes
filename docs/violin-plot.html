@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Violin-Plot</title>
+
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://stevesanjay.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://stevesanjay.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://stevesanjay.github.io/pynotes/violin-plot.html" rel="bookmark"
+        title="Permalink to Violin-Plot">Violin-Plot</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1"># Violin Plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">data</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>array([-1.00896769, -1.04937834, -0.79464383, -1.0585053 , -0.37319413,
+        0.41837817, -0.49298387,  0.44078265,  1.96077376,  0.78516844,
+        0.1461249 , -0.4723821 , -0.21570295, -0.64589961, -0.31228687,
+       -0.04080535, -0.20110063,  0.6682114 ,  1.54493594,  0.65610241,
+        0.34148652, -0.39771451, -0.71475643, -0.45955653,  0.15542705,
+        1.33974947,  1.06586999, -2.18765567,  2.392362  ,  1.47664231,
+        0.008509  , -0.11028884, -0.51575358,  1.07841089,  0.29077968,
+        1.41431703, -1.03679201,  1.61573929,  0.41619595,  1.65825701,
+        1.11710019,  2.75167727, -0.26412822, -0.38754309, -0.69597364,
+       -0.35892439,  0.04871884, -1.35922211, -1.16678765, -0.79673334,
+        2.00947305,  1.80088867, -1.1143128 , -0.57728433, -1.40951679,
+       -0.11685889, -0.36580366,  0.49299873, -0.46293247, -0.87202061,
+        0.20872422,  2.27242069, -1.08083772, -0.55437377,  1.48885727,
+       -0.87191647,  0.58402508,  0.03547206,  1.40788409, -1.64663219,
+        0.78469032, -1.11620438,  1.92595149,  0.05415439, -0.02347257,
+       -0.63694636,  0.58241348,  0.78644681, -1.35693193,  1.56227343,
+       -0.99411813, -0.05271509,  0.71196667, -0.30863803, -1.75349889,
+        1.15969282, -1.30373137,  0.17238442,  0.29695286, -1.18361209,
+        0.38804087,  0.63005141,  0.47141191, -1.01288358,  1.07918631,
+       -0.04235781, -0.34329526,  1.14920611,  2.23704333,  0.54702937])
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating a violin plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;bodies&#39;: [&lt;matplotlib.collections.PolyCollection at 0x116523e30&gt;],
+ &#39;cmaxes&#39;: &lt;matplotlib.collections.LineCollection at 0x1167a6060&gt;,
+ &#39;cmins&#39;: &lt;matplotlib.collections.LineCollection at 0x1167a6780&gt;,
+ &#39;cbars&#39;: &lt;matplotlib.collections.LineCollection at 0x1167a6ba0&gt;}
+</code></pre></div>
+
+<p><img alt="png" src="violin-plot_files/violin-plot_8_1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Adding title and labels</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Violin Plot&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Violin Plot&#39;)
+</code></pre></div>
+
+<p><img alt="png" src="violin-plot_files/violin-plot_10_1.png"></p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://stevesanjay.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/stevesanjay/">GitHub</a></li>
+            <li><a href="steve-sanjay-942a32275">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by steve sanjay</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
