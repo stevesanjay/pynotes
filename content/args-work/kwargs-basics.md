@@ -2,23 +2,36 @@
 title: Kwargs-Basics
 date: 2024-11-23
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 5
+score: 5
 ---
 
 ```python
-def print_everything(*args):
-        for count, thing in enumerate(args):
-            print( '{0}. {1}'.format(count, thing))
+ # reading data by using the kwargs
 ```
 
 
 ```python
-print_everything("steve","sanjay")
+def greet(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
 ```
 
-    0. steve
-    1. sanjay
+
+```python
+def main_fun():
+    greet(name="Alice", age=25, city="New York")
+```
+
+
+```python
+# Example usage
+main_fun()
+```
+
+    name: Alice
+    age: 25
+    city: New York
 
 
 
@@ -28,4 +41,4 @@ print_everything("steve","sanjay")
 
 
 ---
-**Score: 0**
+**Score: 5**
