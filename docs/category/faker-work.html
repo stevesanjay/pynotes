@@ -46,6 +46,243 @@
         
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/bulk-fake-data.html"><h3 class="article-title">Bulk-Fake-Data</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Fake Data in Bulk</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate 5 fake user profiles</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">email</span><span class="p">()</span>
+    <span class="n">city</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">city</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">, Email: </span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s1">, City: </span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Haley</span><span class="w"> </span><span class="n">Hall</span><span class="o">,</span><span class="w"> </span><span class="n">Email</span><span class="o">:</span><span class="w"> </span><span class="n">amberholland</span><span class="err">@</span><span class="n">example</span><span class="o">.</span><span class="na">org</span><span class="o">,</span><span class="w"> </span><span class="n">City</span><span class="o">:</span><span class="w"> </span><span class="n">Melindaport</span>
+<span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Morgan</span><span class="w"> </span><span class="n">Bryant</span><span class="o">,</span><span class="w"> </span><span class="n">Email</span><span class="o">:</span><span class="w"> </span><span class="n">bernard47</span><span class="err">@</span><span class="n">example</span><span class="o">.</span><span class="na">org</span><span class="o">,</span><span class="w"> </span><span class="n">City</span><span class="o">:</span><span class="w"> </span><span class="n">Sherifurt</span>
+<span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Savannah</span><span class="w"> </span><span class="n">Anderson</span><span class="o">,</span><span class="w"> </span><span class="n">Email</span><span class="o">:</span><span class="w"> </span><span class="n">prodriguez</span><span class="err">@</span><span class="n">example</span><span class="o">.</span><span class="na">org</span><span class="o">,</span><span class="w"> </span><span class="n">City</span><span class="o">:</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">Logan</span>
+<span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Jenny</span><span class="w"> </span><span class="n">Lara</span><span class="o">,</span><span class="w"> </span><span class="n">Email</span><span class="o">:</span><span class="w"> </span><span class="n">friedmanmaxwell</span><span class="err">@</span><span class="n">example</span><span class="o">.</span><span class="na">net</span><span class="o">,</span><span class="w"> </span><span class="n">City</span><span class="o">:</span><span class="w"> </span><span class="n">Port</span><span class="w"> </span><span class="n">Judithland</span>
+<span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">Cathy</span><span class="w"> </span><span class="n">Hernandez</span><span class="o">,</span><span class="w"> </span><span class="n">Email</span><span class="o">:</span><span class="w"> </span><span class="n">pcraig</span><span class="err">@</span><span class="n">example</span><span class="o">.</span><span class="na">org</span><span class="o">,</span><span class="w"> </span><span class="n">City</span><span class="o">:</span><span class="w"> </span><span class="n">Moraview</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Cheryl Sharp MD&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">email</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;pcraig@example.org&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">city</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Moraview&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/custom-fields.html"><h3 class="article-title">Custom-Fields</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Fake Data for Custom Fields</span>
+<span class="c1"># Generate structured fake data for applications like user testing or mock APIs.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate a structured fake user record</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">user_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">uuid4</span><span class="p">(),</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span>
+    <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">email</span><span class="p">(),</span>
+    <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="n">fake</span><span class="o">.</span><span class="n">phone_number</span><span class="p">(),</span>
+    <span class="s1">&#39;birthdate&#39;</span><span class="p">:</span> <span class="n">fake …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/custom-fields.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/custom-provider.html"><h3 class="article-title">Custom-Provider</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Custom Provider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker.providers</span> <span class="kn">import</span> <span class="n">BaseProvider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Custom provider class</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyProvider</span><span class="p">(</span><span class="n">BaseProvider</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">programming_language</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_element</span><span class="p">([</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="s1">&#39;Go&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span><span class="o">.</span><span class="n">add_provider</span><span class="p">(</span><span class="n">MyProvider</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Use the custom provider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">language</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">programming_language</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">language</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Java&#39;
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/custom-provider.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/email-generator.html"><h3 class="article-title">Email-Generator</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># json generator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Import necessary modules</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># create a method write a logic</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_emails</span><span class="p">(</span><span class="nb">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
+
+    <span class="n">item_count</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
+
+    <span class="n">email_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">item_count</span><span class="p">):</span>
+        <span class="n">email_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">email</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">email_list</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">create_dataframe</span><span class="p">():</span>
+
+    <span class="n">email_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/email-generator.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/faker-to-csv.html"><h3 class="article-title">Faker-To-Csv</h3></a>
 <h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
 </h6>
@@ -80,31 +317,291 @@
     <span class="n">csv_file</span> <span class="o">=</span> <span class="s1">&#39;fake_data.csv&#39;</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;E mail&#39;</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="s1">&#39;Github Link&#39;</span><span class="p">,</span> <span class="s1">&#39;phone_number&#39;</span><span class="p">])</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">datas</span><span class="p">)</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1000 rows of fake data added to </span><span class="si">{</span><span class="n">csv_file</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/faker-to-csv.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/localized-data.html"><h3 class="article-title">Localized-Data</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Localized Fake Data</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">generate_data</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="mf">1000</span><span class="w"> </span><span class="n">rows</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">fake</span><span class="w"> </span><span class="kd">data</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">fake_data</span><span class="mf">.</span><span class="n">csv</span><span class="mf">.</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Create Faker instance for French locale</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">(</span><span class="s1">&#39;fr_FR&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate localized fake data</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Émilie Ferrand&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">address</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">address</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;6, chemin Louis Lenoir\n74808 Besson&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">phone_number</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">phone_number</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">phone_number</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;0384958153&#39;
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
 
 </p>
 
 
 
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/localized-data.html">Read More</a>
+                <hr  class="gradient"/>
             </article>
 
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/lorem-ipsum.html"><h3 class="article-title">Lorem-Ipsum</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Import necessary modules</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># create a method to write a logic.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">startpy</span><span class="p">():</span>
+    <span class="n">my_word_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;danish&#39;</span><span class="p">,</span><span class="s1">&#39;cheesecake&#39;</span><span class="p">,</span><span class="s1">&#39;sugar&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lollipop&#39;</span><span class="p">,</span><span class="s1">&#39;wafer&#39;</span><span class="p">,</span><span class="s1">&#39;Gummies&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sesame&#39;</span><span class="p">,</span><span class="s1">&#39;Jelly&#39;</span><span class="p">,</span><span class="s1">&#39;beans&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;pie&#39;</span><span class="p">,</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="s1">&#39;Ice&#39;</span><span class="p">,</span><span class="s1">&#39;oat&#39;</span> <span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">sentence</span><span class="p">())</span>
+    <span class="c1"># &#39;Expedita at beatae voluptatibus nulla omnis.&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="n">ext_word_list</span><span class="o">=</span><span class="n">my_word_list</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">startpy</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Provide …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lorem-ipsum.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/random-name.html"><h3 class="article-title">Random-Name</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># random names</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span><span class="o">=</span><span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># create a function to write the logic</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_random_names</span><span class="p">():</span>
+
+    <span class="n">random_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">random_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+    <span class="k">return</span>  <span class="n">random_names</span>  
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># create a another function to call the above method </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">startpy</span><span class="p">():</span>
+    <span class="n">random_name_list</span> <span class="o">=</span> <span class="n">generate_random_names</span><span class="p">()</span>   
+    <span class="nb">print</span><span class="p">(</span><span class="n">random_name_list</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">startpy</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;Robert Robinson …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/random-name.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/static-seed.html"><h3 class="article-title">Static-Seed</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Static Seed for Reproducibility</span>
+<span class="c1"># Set a static seed to ensure the same fake data is generated every time.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker with a seed</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Faker</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate reproducible fake data</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Adam Bryan
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">address</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">49625</span><span class="w"> </span><span class="n">Morgan</span><span class="w"> </span><span class="n">Green …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/static-seed.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/user-data-making.html"><h3 class="article-title">User-Data-Making</h3></a>
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#  user data making</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Import necessary modules</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">faker</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># global variable </span>
+<span class="n">COUNT</span> <span class="o">=</span> <span class="mi">1000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># create a method to write the logic</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_names</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+
+    <span class="n">item_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;name&#39;</span><span class="p">):</span>
+            <span class="n">c_item</span> <span class="o">=</span> <span class="n">faker</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+        <span class="k">elif</span><span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;address …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/user-data-making.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 1 of 1</h6>
 
@@ -112,10 +609,6 @@
 
 </p>
 </div>
-
-
-
-            <!-- /#posts-list -->
 
     </div>
     <!-- End Main Content -->
