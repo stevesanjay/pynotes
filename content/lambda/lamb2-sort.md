@@ -1,6 +1,6 @@
 ---
 title: Lamb2-Sort
-date: 2024-11-23
+date: 2024-11-27
 author: Your Name
 cell_count: 4
 score: 0
