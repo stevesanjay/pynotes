@@ -47,8 +47,110 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/extract-dates.html"><h3 class="article-title">Extract-Dates</h3></a>
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Extract Dates in DD/MM/YYYY Format</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_dates</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d</span><span class="si">{2}</span><span class="s1">/\d</span><span class="si">{2}</span><span class="s1">/\d</span><span class="si">{4}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dates</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">dates</span> <span class="o">=</span> <span class="n">extract_dates</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">dates</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;12/05/2024&#39;, &#39;25/12/2024&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/extract-dates.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/f-anno.html"><h3 class="article-title">F Anno</h3></a>
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># addition</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span><span class="nb">int</span> <span class="p">,</span> <span class="n">num2</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+
+    <span class="n">add</span> <span class="o">=</span> <span class="n">num1</span><span class="o">+</span><span class="n">num2</span>
+    <span class="c1"># print(f&#39;word:{add}&#39;)</span>
+    <span class="k">return</span> <span class="n">add</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">greet</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">val</span> <span class="o">=</span> <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;stev&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>str
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">val</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;steve&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/f-anno.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/f2-args.html"><h3 class="article-title">F2 Args</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -96,7 +198,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/faker-to-csv.html"><h3 class="article-title">Faker-To-Csv</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -144,7 +246,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/faker123-reversestring.html"><h3 class="article-title">Faker123-Reversestring</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -178,7 +280,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/faker2csv-batch.html"><h3 class="article-title">Faker2Csv-Batch</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -235,7 +337,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/find-email.html"><h3 class="article-title">Find-Email</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -283,7 +385,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/find-even.html"><h3 class="article-title">Find Even</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -321,7 +423,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/find-location.html"><h3 class="article-title">Find-Location</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -353,7 +455,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/find-odd-no.html"><h3 class="article-title">Find-Odd-No</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -401,99 +503,6 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/find123-hexa.html"><h3 class="article-title">Find123-Hexa</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Extract All Hexadecimal Values</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_hex_values</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">hex_values</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b0[xX][0-9a-fA-F]+\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">hex_values</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">hex_values</span> <span class="o">=</span> <span class="n">extract_hex_values</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hexadecimal values found:&quot;</span><span class="p">,</span> <span class="n">hex_values</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Hexadecimal values found: []
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/find123-hexa.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/find23-capital-letter.html"><h3 class="article-title">Find23-Capital-Letter</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Extract All Capitalized Words</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_capitalized_words</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">capitalized_words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b[A-Z][a-z]*\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">capitalized_words</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">capitalized_words</span> <span class="o">=</span> <span class="n">extract_capitalized_words</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Capitalized words found:&quot;</span><span class="p">,</span> <span class="n">capitalized_words</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Capitalized words found: [&#39;Hello&#39;, &#39;I&#39;, &#39;Here&#39;, &#39;Check&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/find23-capital-letter.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 5 of 12</h6>
@@ -520,6 +529,7 @@
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
@@ -539,6 +549,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
    
         </ul>
 

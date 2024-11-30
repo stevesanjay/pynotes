@@ -48,7 +48,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-append.html"><h3 class="article-title">Basic-Append</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -84,7 +84,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-dict.html"><h3 class="article-title">Basic-Dict</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -127,7 +127,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-else-forloop12.html"><h3 class="article-title">Basic-Else-Forloop12</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -174,7 +174,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-enum.html"><h3 class="article-title">Basic-Enum</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -223,7 +223,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-forloop123.html"><h3 class="article-title">Basic-Forloop123</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -276,7 +276,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-glob.html"><h3 class="article-title">Basic Glob</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -327,7 +327,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-lam.html"><h3 class="article-title">Basic-Lam</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -359,7 +359,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-line-plot.html"><h3 class="article-title">Basic-Line-Plot</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -403,8 +403,64 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-selenium.html"><h3 class="article-title">Basic-Selenium</h3></a>
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the Chrome driver</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Open a website</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://www.google.com&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Print the title of the page</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Google
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Close the browser</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-selenium.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic123-forloop234.html"><h3 class="article-title">Basic123-Forloop234</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -452,52 +508,6 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/box-plot.html"><h3 class="article-title">Box-Plot</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Box Plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Creating a box plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>{&#39;whiskers&#39;: [&lt;matplotlib.lines.Line2D at 0x10b549bb0&gt;,
-  &lt;matplotlib.lines.Line2D at 0x10b549e80&gt;],
- &#39;caps&#39;: [&lt;matplotlib.lines.Line2D at 0x10b54a150&gt;,
-  &lt;matplotlib.lines.Line2D at …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/box-plot.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 2 of 12</h6>
@@ -524,6 +534,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
@@ -543,6 +554,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
    
         </ul>
 

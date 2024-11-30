@@ -47,8 +47,115 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/custom-provider.html"><h3 class="article-title">Custom-Provider</h3></a>
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Custom Provider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker.providers</span> <span class="kn">import</span> <span class="n">BaseProvider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Custom provider class</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyProvider</span><span class="p">(</span><span class="n">BaseProvider</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">programming_language</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_element</span><span class="p">([</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">,</span> <span class="s1">&#39;Go&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span><span class="o">.</span><span class="n">add_provider</span><span class="p">(</span><span class="n">MyProvider</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Use the custom provider</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">language</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">programming_language</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">language</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Java&#39;
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/custom-provider.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/default-value.html"><h3 class="article-title">Default-Value</h3></a>
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code> <span class="c1"># Default Value if Attribute Does Not Exist</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="n">get</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Example</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mi">42</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">example</span> <span class="o">=</span> <span class="n">Example</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">example</span><span class="p">,</span> <span class="s2">&quot;non_existent_attribute&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;Default Value&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Default Value&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/default-value.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/delete-attr.html"><h3 class="article-title">Delete-Attr</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -95,7 +202,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/delete-data.html"><h3 class="article-title">Delete-Data</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -157,7 +264,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/dynamic-set.html"><h3 class="article-title">Dynamic-Set</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -204,7 +311,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/e-customeexcept.html"><h3 class="article-title">E-Customeexcept</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -251,7 +358,7 @@ your age 20 is eligible to vote
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/e-index.html"><h3 class="article-title">E-Index</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -292,7 +399,7 @@ your age 20 is eligible to vote
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/else-forloop.html"><h3 class="article-title">Else Forloop</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -339,7 +446,7 @@ your age 20 is eligible to vote
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/email-generator.html"><h3 class="article-title">Email-Generator</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -397,7 +504,7 @@ your age 20 is eligible to vote
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/exception-hand.html"><h3 class="article-title">Exception Hand</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+<h6 class="subheader" title="2024-11-30T00:00:00-05:00">Sat 30 November 2024
 </h6>
 
 
@@ -429,108 +536,6 @@ your age 20 is eligible to vote
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/extract-dates.html"><h3 class="article-title">Extract-Dates</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Extract Dates in DD/MM/YYYY Format</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_dates</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">dates</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d</span><span class="si">{2}</span><span class="s1">/\d</span><span class="si">{2}</span><span class="s1">/\d</span><span class="si">{4}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">dates</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">dates</span> <span class="o">=</span> <span class="n">extract_dates</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">dates</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[&#39;12/05/2024&#39;, &#39;25/12/2024&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/extract-dates.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/f-anno.html"><h3 class="article-title">F Anno</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># addition</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span><span class="nb">int</span> <span class="p">,</span> <span class="n">num2</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-
-    <span class="n">add</span> <span class="o">=</span> <span class="n">num1</span><span class="o">+</span><span class="n">num2</span>
-    <span class="c1"># print(f&#39;word:{add}&#39;)</span>
-    <span class="k">return</span> <span class="n">add</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">greet</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">4</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">val</span> <span class="o">=</span> <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;stev&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>str
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">val</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;steve&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/f-anno.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 4 of 12</h6>
@@ -557,6 +562,7 @@ your age 20 is eligible to vote
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
@@ -576,6 +582,7 @@ your age 20 is eligible to vote
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
    
         </ul>
 
