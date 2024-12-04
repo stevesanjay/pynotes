@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Seaborn4 Violinplot</title>
+
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://stevesanjay.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://stevesanjay.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://stevesanjay.github.io/pynotes/seaborn4-violinplot.html" rel="bookmark"
+        title="Permalink to Seaborn4 Violinplot">Seaborn4 Violinplot</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Create violin plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Figure size 800x600 with 0 Axes&gt;
+
+
+
+
+&lt;Figure size 800x600 with 0 Axes&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">violin</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;pastel&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p><img alt="png" src="seaborn4_violinplot_files/seaborn4_violinplot_6_0.png"></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Customize plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">violin</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Violin Plot of Sepal Length by Species&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Violin Plot of Sepal Length by Species&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">violin</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Species&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 24.0, &#39;Species&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">violin</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Sepal Length (cm)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(24.140625000000007, 0.5, &#39;Sepal Length (cm)&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Species&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">ss</span><span class="o">/</span><span class="mi">5</span><span class="n">vtwrdm14673srh7sngd_6880000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_46623</span><span class="o">/</span><span class="mf">901306951.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">artists</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">put</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">legend</span><span class="o">.</span><span class="w">  </span><span class="n">Note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">artists</span><span class="w"> </span><span class="n">whose</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">underscore</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">ignored</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">legend</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">argument</span><span class="o">.</span>
+<span class="w">  </span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Species&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">title_fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+
+
+
+
+
+<span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">Legend</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x12958b590</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p><img alt="png" src="seaborn4_violinplot_files/seaborn4_violinplot_11_2.png"></p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Figure size 640x480 with 0 Axes&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Save plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;s_violinplot.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Figure size 640x480 with 0 Axes&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p>
+<p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://stevesanjay.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/enum.html">enum</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/stevesanjay/">GitHub</a></li>
+            <li><a href="steve-sanjay-942a32275">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by steve sanjay</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 title: Range
-date: 2024-11-30
+date: 2024-12-05
 author: Your Name
 cell_count: 6
 score: 5

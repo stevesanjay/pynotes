@@ -1,6 +1,6 @@
 ---
 title: Exception Hand
-date: 2024-11-30
+date: 2024-12-05
 author: Your Name
 cell_count: 2
 score: 0
