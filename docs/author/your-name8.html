@@ -47,8 +47,45 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate115-unique-names-json.html"><h3 class="article-title">Generate115-Unique-Names-Json</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Unique Names and Save to JSON</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_unique_names_json</span><span class="p">(</span><span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># Ensure unique names</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">num_names</span><span class="p">:</span>
+        <span class="n">names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">())</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">names</span><span class="p">),</span> <span class="n">file</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names</span><span class="si">}</span><span class="s2"> unique names and saved to </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">num_names …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate115-unique-names-json.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/generate123-names-with-prefix.html"><h3 class="article-title">Generate123-Names-With-Prefix</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -78,7 +115,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/generate434names-from-wordlist.html"><h3 class="article-title">Generate434Names-From-Wordlist</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -108,7 +145,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/generate56-unique-names.html"><h3 class="article-title">Generate56-Unique-Names</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -142,7 +179,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/generate65-names-to-csv.html"><h3 class="article-title">Generate65-Names-To-Csv</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -175,7 +212,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/generate87-names-with-suffixpy.html"><h3 class="article-title">Generate87-Names-With-Suffix.Py</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -205,7 +242,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/get-set.html"><h3 class="article-title">Get-Set</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -260,7 +297,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/glob-vari.html"><h3 class="article-title">Glob Vari</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -315,7 +352,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/heatmap.html"><h3 class="article-title">Heatmap</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -375,7 +412,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/histogram.html"><h3 class="article-title">Histogram</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -414,53 +451,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/kwargs-basics.html"><h3 class="article-title">Kwargs-Basics</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code> <span class="c1"># reading data by using the kwargs</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main_fun</span><span class="p">():</span>
-    <span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;New York&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
-<span class="n">main_fun</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">Alice</span>
-<span class="n">age</span><span class="o">:</span><span class="w"> </span><span class="mi">25</span>
-<span class="n">city</span><span class="o">:</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">York</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/kwargs-basics.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 8 of 14</h6>
+<h6 class="subheader">Page 8 of 15</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/author/your-name7.html">&laquo; Prev</a>
@@ -496,6 +489,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>

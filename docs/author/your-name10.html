@@ -47,8 +47,55 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/match123-all-no.html"><h3 class="article-title">Match123-All-No</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#  Match All Numbers in a File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extract_numbers</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">numbers</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d+(\.\d+)?\b&#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">numbers</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="n">extract_numbers</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numbers found:&quot;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Numbers found: [&#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/match123-all-no.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/missing-attr.html"><h3 class="article-title">Missing-Attr</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -93,7 +140,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/multiple-types.html"><h3 class="article-title">Multiple-Types</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -142,8 +189,113 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/multiprocessing-to-bypass-gil.html"><h3 class="article-title">Multiprocessing-To-Bypass-Gil</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 20250130</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Using multiprocessing to Bypass GIL</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># CPU-bound task</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cpu_bound_task</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cpu_bound_task</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Result</span><span class="o">:</span><span class="w"> </span><span class="mi">49999995000000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Start two processes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">process</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">cpu_bound_task</span><span class="p">())</span>
+        <span class="n">processes …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/multiprocessing-to-bypass-gil.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/multithreading-gil.html"><h3 class="article-title">Multithreading-Gil</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 20250130</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Multithreading with the GIL (I/O-bound)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># I/O-bound task</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">io_bound_task</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Simulate I/O operation</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I/O Task Done&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Start two threads</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">io_bound_task</span><span class="p">)</span>
+    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+    <span class="n">thread</span><span class="o">.</span><span class="n">start …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/multithreading-gil.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/nested-object.html"><h3 class="article-title">Nested-Object</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -198,7 +350,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/pie-chart.html"><h3 class="article-title">Pie-Chart</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -245,7 +397,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/q2.html"><h3 class="article-title">Q2</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -281,7 +433,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/q3.html"><h3 class="article-title">Q3</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -319,7 +471,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/q4.html"><h3 class="article-title">Q4</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -350,137 +502,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/q5.html"><h3 class="article-title">Q5</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># print(reverse_words(&quot;Hello World&quot;))</span>
-
-<span class="k">def</span> <span class="nf">find_longest_word</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function takes a string as input and returns the longest word in the string.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    s (str): Input string</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    str: Longest word in the input string</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Split the input string into words</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="k">for</span> <span class="n">longest_word</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/q5.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/random-find-even-odd.html"><h3 class="article-title">Random-Find-Even-Odd</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_odd</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is odd number&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is even number&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">c_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-        <span class="n">is_odd</span><span class="p">(</span><span class="n">c_number</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">1617</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">odd</span><span class="w"> </span><span class="n">number</span>
-<span class="mf">1172</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">even</span><span class="w"> </span><span class="n">number</span>
-<span class="mf">1545</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">odd …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/random-find-even-odd.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/random-name.html"><h3 class="article-title">Random-Name</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># random names</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">fake</span><span class="o">=</span><span class="n">Faker</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># create a function to write the logic</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_random_names</span><span class="p">():</span>
-
-    <span class="n">random_names</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">random_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
-    <span class="k">return</span>  <span class="n">random_names</span>  
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># create a another function to call the above method </span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">startpy</span><span class="p">():</span>
-    <span class="n">random_name_list</span> <span class="o">=</span> <span class="n">generate_random_names</span><span class="p">()</span>   
-    <span class="nb">print</span><span class="p">(</span><span class="n">random_name_list</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">startpy</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[&#39;Robert Robinson …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/random-name.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 10 of 14</h6>
+<h6 class="subheader">Page 10 of 15</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/author/your-name9.html">&laquo; Prev</a>
@@ -516,6 +540,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>

@@ -1,6 +1,6 @@
 ---
 title: Func2 Exception
-date: 2025-01-30
+date: 2025-01-31
 author: Your Name
 cell_count: 4
 score: 0

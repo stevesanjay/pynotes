@@ -47,147 +47,8 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/argsparse.html"><h3 class="article-title">Argsparse</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aa&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;bb&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;cc&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;dd&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">d</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>{&#39;aa&#39;: 3, &#39;bb&#39;: 4, &#39;cc&#39;: 2, &#39;dd&#39;: 1}
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">s</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[(&#39;bb&#39;, 4), (&#39;aa&#39;, 3), (&#39;cc&#39;, 2), (&#39;dd&#39;, 1)]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>bb …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/argsparse.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/bar-chart.html"><h3 class="article-title">Bar-Chart</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Bar Chart</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Creating the bar chart</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;BarContainer object of 4 artists&gt;
-</code></pre></div>
-
-<p><img alt="png" src="bar-chart_files/bar-chart_6_1.png"></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Adding title and labels</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Bar Chart&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Bar Chart&#39;)
-</code></pre></div>
-
-<p><img alt="png" src="bar-chart_files/bar-chart_8_1.png"></p>
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Categories&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Text …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/bar-chart.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/base-code.html"><h3 class="article-title">Base-Code</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Sample HTML content</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">html_content</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">&lt;html&gt;</span>
-<span class="s2">&lt;head&gt;</span>
-<span class="s2">    &lt;title&gt;Sample Page&lt;/title&gt;</span>
-<span class="s2">&lt;/head&gt;</span>
-<span class="s2">&lt;body&gt;</span>
-<span class="s2">    &lt;h1&gt;Welcome to Web Scraping&lt;/h1&gt;</span>
-<span class="s2">    &lt;p&gt;This is a simple paragraph for demonstration.&lt;/p&gt;</span>
-<span class="s2">    &lt;div&gt;</span>
-<span class="s2">        &lt;h2&gt;Subsection&lt;/h2&gt;</span>
-<span class="s2">        &lt;ul&gt;</span>
-<span class="s2">            &lt;li&gt;Item 1&lt;/li&gt;</span>
-<span class="s2">            &lt;li&gt;Item 2&lt;/li&gt;</span>
-<span class="s2">            &lt;li&gt;Item 3 …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/base-code.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-append.html"><h3 class="article-title">Basic-Append</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -223,7 +84,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-dict.html"><h3 class="article-title">Basic-Dict</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -266,7 +127,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-else-forloop12.html"><h3 class="article-title">Basic-Else-Forloop12</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -313,7 +174,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-enum.html"><h3 class="article-title">Basic-Enum</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -362,7 +223,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-forloop123.html"><h3 class="article-title">Basic-Forloop123</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -415,7 +276,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-glob.html"><h3 class="article-title">Basic Glob</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -466,7 +327,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/basic-lam.html"><h3 class="article-title">Basic-Lam</h3></a>
-<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
 </h6>
 
 
@@ -493,9 +354,158 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
                 <hr  class="gradient"/>
             </article>
 
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-line-plot.html"><h3 class="article-title">Basic-Line-Plot</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic Line Plot</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&lt;matplotlib.lines.Line2D at 0x111965700&gt;]
+</code></pre></div>
+
+<p><img alt="png" src="basic-line-plot_files/basic-line-plot_4_1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Adding title and labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Basic Line Plot&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Basic Line …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-line-plot.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-met.html"><h3 class="article-title">Basic-Met</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># simple method</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">simple_print</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">simple_print</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>hello world
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">simple_return</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;hello world&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">simple_return</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;hello world&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/method.html">method</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-met.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/basic-multithreading.html"><h3 class="article-title">Basic-Multithreading</h3></a>
+<h6 class="subheader" title="2025-01-31T00:00:00-05:00">Fri 31 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 20250131</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic Multithreading with the GIL (CPU-bound)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># CPU-bound task</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cpu_bound_task</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cpu_bound_task</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Result</span><span class="o">:</span><span class="w"> </span><span class="mi">49999995000000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Start two threads</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">cpu_bound_task</span><span class="p">)</span>
+    <span class="n">threads …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/basic-multithreading.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 14</h6>
+<h6 class="subheader">Page 2 of 15</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/author/your-name.html">&laquo; Prev</a>
@@ -531,6 +541,7 @@ Name …</code></pre></div><p class="subheader">Category: <a href="https://steve
             <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/gil.html">gil</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
