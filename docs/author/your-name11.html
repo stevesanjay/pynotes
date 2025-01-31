@@ -47,96 +47,49 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/scrap-href.html"><h3 class="article-title">Scrap-Href</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://stevesanjay.github.io/pynotes/range.html"><h3 class="article-title">Range</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<div class="highlight"><pre><span></span><code><span class="n">nums</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><pre><span></span><code><span class="n">nums</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://books.toscrape.com/&quot;</span>
+<div class="highlight"><pre><span></span><code>range(0, 5)
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>range(2, 4)
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_book_details</span><span class="p">():</span>
-    <span class="n">book_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;section div ol li&quot;</span><span class="p">):</span>
-        <span class="c1"># print(row)</span>
-
-        <span class="n">link</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-
-        <span class="n">link_href</span> <span class="o">=</span> <span class="n">link</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
-
-
-        <span class="n">book_list</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-            <span class="s1">&#39;link&#39;</span> <span class="p">:</span> <span class="n">link_href</span>
-        <span class="p">})</span>
-
-    <span class="k">for</span> 
-
-    <span class="k">return</span> <span class="n">book_list …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/scrap-href.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/scrap1-single-element.html"><h3 class="article-title">Scrap1-Single-Element</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<div class="highlight"><pre><span></span><code>range(2, 5)
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="p">(</span><span class="n">nums</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> 
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">price</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;price_color&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>£51.77
+<div class="highlight"><pre><span></span><code>range(0, 4)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/scrap1-single-element.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/range.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -144,27 +97,68 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn1-scatterplot.html"><h3 class="article-title">Seaborn1 Scatterplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://stevesanjay.github.io/pynotes/read-csv.html"><h3 class="article-title">Read Csv</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
+<div class="highlight"><pre><span></span><code><span class="n">FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;titanic.csv&quot;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">Collecting</span><span class="w"> </span><span class="n">seaborn</span>
-<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">seaborn</span><span class="o">-</span><span class="mf">0.13</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span><span class="o">.</span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="mf">5.4</span><span class="w"> </span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">numpy</span><span class="o">!=</span><span class="mf">1.24</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">1.20</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">seaborn</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">1.26</span><span class="o">.</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">Requirement …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILE_PATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/basic-pandas.html">basic-pandas</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn1-scatterplot.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/read-csv.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -172,40 +166,295 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn10-lmplot.html"><h3 class="article-title">Seaborn10 Lmplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://stevesanjay.github.io/pynotes/read-data.html"><h3 class="article-title">Read-Data</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">read_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;data.xlsx&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>       name  age        city
+0     steve   25     chennai
+1    sanjay   26     madurai
+2     jerin   27  coimbatore
+3  saravana   28       salem
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top …</style></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/read-data.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/remove-extra-space.html"><h3 class="article-title">Remove-Extra-Space</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Find and Remove Extra Whitespaces</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Extra spaces removed.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample.txt&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">remove_extra_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Extra spaces removed …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/remove-extra-space.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/replace-phone.html"><h3 class="article-title">Replace-Phone</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Replace Phone Numbers in a File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replace_phone_numbers</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="s2">&quot;PHONE_NUMBER&quot;</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{3}</span><span class="s1">-\d</span><span class="si">{4}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="n">replacement</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Phone numbers replaced.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">filename …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/replace-phone.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/replace-space.html"><h3 class="article-title">Replace-Space</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Match and Replace Multiple Spaces with a Single Space</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replace_multiple_spaces</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;Multiple spaces replaced with a single space.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/replace-space.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/replace-specific-word.html"><h3 class="article-title">Replace-Specific-Word</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Replace Specific Words in a File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">replace_words</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">target_word</span><span class="p">,</span> <span class="n">replacement_word</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">updated_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">rf</span><span class="s1">&#39;\b</span><span class="si">{</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">target_word</span><span class="p">)</span><span class="si">}</span><span class="s1">\b&#39;</span><span class="p">,</span> <span class="n">replacement_word</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">updated_content</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Replaced &#39;</span><span class="si">{</span><span class="n">target_word</span><span class="si">}</span><span class="s2">&#39; with &#39;</span><span class="si">{</span><span class="n">replacement_word</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sample …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/replace-specific-word.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/sample2-func.html"><h3 class="article-title">Sample2-Func</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;positive&#39;</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;negative&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;zero&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;positive&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;zero&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sign</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;negative&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/sample2-func.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/scatter-plot.html"><h3 class="article-title">Scatter-Plot</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Scatter Plot</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">titanic</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Create lmplot</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creating the scatter plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">lmplot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">titanic</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;fare&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;muted&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>&lt;matplotlib.collections.PathCollection at 0x10db69460&gt;
 </code></pre></div>
 
-<p><img alt="png" src="seaborn10_lmplot_files/seaborn10_lmplot_5_0.png"></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Customize plot</span>
+<p><img alt="png" src="scatter-plot_files/scatter-plot_4_1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Adding title and labels</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">lmplot</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;LM Plot: Age vs Fare by Class and …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scatter Plot&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Scatter Plot&#39;)
+</code></pre></div>
+
+<p><img alt="png" src="scatter-plot_files/scatter-plot_6_1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="n">plt …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn10-lmplot.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/scatter-plot.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -213,297 +462,44 @@
 
 
             <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn2-boxplot.html"><h3 class="article-title">Seaborn2 Boxplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">diamonds</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;diamonds&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create boxplot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;Figure size 1000x600 with 0 Axes&gt;
-
-
-
-
-&lt;Figure size 1000x600 with 0 Axes&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">boxplot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">diamonds</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<p><img alt="png" src="seaborn2_boxplot_files/seaborn2_boxplot_6_0.png"></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Customize plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">boxplot …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn2-boxplot.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn3-heatmap.html"><h3 class="article-title">Seaborn3 Heatmap</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Generate random data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create heatmap</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;Figure size 1200x800 with 0 Axes&gt;
-
-
-
-
-&lt;Figure size 1200x800 with 0 Axes&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">heatmap</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span> <span class="n">linewidths …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn3-heatmap.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn4-violinplot.html"><h3 class="article-title">Seaborn4 Violinplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create violin plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;Figure size 800x600 with 0 Axes&gt;
-
-
-
-
-&lt;Figure size 800x600 with 0 Axes&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">violin</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;pastel …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn4-violinplot.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn5-pairplot.html"><h3 class="article-title">Seaborn5 Pairplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://stevesanjay.github.io/pynotes/score-srcaping.html"><h3 class="article-title">Score Srcaping</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">penguins</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;penguins&#39;</span><span class="p">)</span>
-</code></pre></div>
+    <span class="c1"># Fetch the page content</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Create pairplot</span>
-</code></pre></div>
+    <span class="c1"># Parse the HTML content</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">pairplot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">penguins</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;muted&quot;</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">])</span>
-</code></pre></div>
-
-<p><img alt="png" src="seaborn5_pairplot_files/seaborn5_pairplot_6_0.png"></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Customize plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">pairplot</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Pairplot of Penguin Dataset&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Text(0.5, 0.98, &#39;Pairplot of …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
+    <span class="n">overall_score_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>  <span class="c1"># Locate the &lt;p&gt; tag</span>
+    <span class="k">if</span> <span class="n">overall_score_element</span><span class="p">:</span>
+        <span class="n">strong_tag</span> <span class="o">=</span> <span class="n">overall_score_element</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;strong&#39;</span><span class="p">)</span>  <span class="c1"># Locate the &lt;strong&gt; tag inside &lt;p&gt;</span>
+        <span class="k">if</span> <span class="n">strong_tag</span> <span class="ow">and …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn5-pairplot.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn6-barplot.html"><h3 class="article-title">Seaborn6 Barplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">titanic</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create barplot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;Figure size 800x600 with 0 Axes&gt;
-
-
-
-
-&lt;Figure size 800x600 with 0 Axes&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">barplot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">titanic</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;survived&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<p><img alt="png" src="seaborn6_barplot_files/seaborn6_barplot_7_0.png"></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Customize plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">barplot …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn6-barplot.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/seaborn7-kdeplot.html"><h3 class="article-title">Seaborn7 Kdeplot</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load dataset</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create KDE plot</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;Figure size 800x600 with 0 Axes&gt;
-
-
-
-
-&lt;Figure size 800x600 with 0 Axes&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">kdeplot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0 …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/seaborn7-kdeplot.html">Read More</a>
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/score-srcaping.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 11 of 13</h6>
+<h6 class="subheader">Page 11 of 14</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/author/your-name10.html">&laquo; Prev</a>
@@ -529,6 +525,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basic-pandas.html">basic-pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
@@ -541,14 +538,17 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/method.html">method</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/resquest-basic.html">resquest-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/type-module.html">type-module</a></li>
    
         </ul>
 

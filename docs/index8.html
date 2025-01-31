@@ -47,8 +47,165 @@
 
 
             <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate123-names-with-prefix.html"><h3 class="article-title">Generate123-Names-With-Prefix</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Names with Specific Prefix and Save to File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_names_with_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">prefix</span> <span class="o">+</span> <span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_names</span><span class="p">)]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names</span><span class="si">}</span><span class="s2"> names with prefix &#39;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">&#39; and saved …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate123-names-with-prefix.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate434names-from-wordlist.html"><h3 class="article-title">Generate434Names-From-Wordlist</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Names from Wordlist and Save to File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_names_from_wordlist</span><span class="p">(</span><span class="n">wordlist</span><span class="p">,</span> <span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_names</span><span class="p">)]</span>  <span class="c1"># Using gen as default function</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names</span><span class="si">}</span><span class="s2"> names from wordlist …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate434names-from-wordlist.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate56-unique-names.html"><h3 class="article-title">Generate56-Unique-Names</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Unique Names and Save to File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_unique_names</span><span class="p">(</span><span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># Using a set to ensure unique names</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">num_names</span><span class="p">:</span>
+        <span class="n">names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">())</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names</span><span class="si">}</span><span class="s2"> unique …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate56-unique-names.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate65-names-to-csv.html"><h3 class="article-title">Generate65-Names-To-Csv</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Names and Save to CSV File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_names_to_csv</span><span class="p">(</span><span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_names</span><span class="p">)]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;Generated Names&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">name</span><span class="p">])</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate65-names-to-csv.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/generate87-names-with-suffixpy.html"><h3 class="article-title">Generate87-Names-With-Suffix.Py</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generate Names with Suffix and Save to File</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">namegenerator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_names_with_suffix</span><span class="p">(</span><span class="n">suffix</span><span class="p">,</span> <span class="n">num_names</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">namegenerator</span><span class="o">.</span><span class="n">gen</span><span class="p">()</span> <span class="o">+</span> <span class="n">suffix</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_names</span><span class="p">)]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="n">num_names</span><span class="si">}</span><span class="s2"> names with suffix &#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&#39; and saved to …</span></code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/generate87-names-with-suffixpy.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://stevesanjay.github.io/pynotes/get-set.html"><h3 class="article-title">Get-Set</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
@@ -103,7 +260,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/glob-vari.html"><h3 class="article-title">Glob Vari</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
@@ -158,7 +315,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/heatmap.html"><h3 class="article-title">Heatmap</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
@@ -218,7 +375,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/histogram.html"><h3 class="article-title">Histogram</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
@@ -262,7 +419,7 @@
 
             <article>
                 <a href="https://stevesanjay.github.io/pynotes/kwargs-basics.html"><h3 class="article-title">Kwargs-Basics</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
 </h6>
 
 
@@ -301,232 +458,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lamb2-sort.html"><h3 class="article-title">Lamb2-Sort</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;steve&#39;</span><span class="p">,</span><span class="s1">&#39;sanjay&#39;</span><span class="p">,</span><span class="s1">&#39;ajay&#39;</span><span class="p">,</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span><span class="s1">&#39;jack&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">word</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">word</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">word</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[&#39;bob&#39;, &#39;ajay&#39;, &#39;jack&#39;, &#39;steve&#39;, &#39;sanjay&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lamb2-sort.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lamb3-filter.html"><h3 class="article-title">Lamb3-Filter</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lamb3-filter.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lambda-even.html"><h3 class="article-title">Lambda-Even</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[4, 6, 8, 12]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lambda-even.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/localized-data.html"><h3 class="article-title">Localized-Data</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Localized Fake Data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># import necessary library</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create Faker instance for French locale</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">(</span><span class="s1">&#39;fr_FR&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Generate localized fake data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">name</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;Émilie Ferrand&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">address</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">address</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">address</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;6, chemin Louis Lenoir\n74808 Besson&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">phone_number</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">phone_number</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">phone_number</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;0384958153&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/localized-data.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://stevesanjay.github.io/pynotes/lorem-ipsum.html"><h3 class="article-title">Lorem-Ipsum</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Import necessary modules</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Initialize Faker</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># create a method to write a logic.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">startpy</span><span class="p">():</span>
-    <span class="n">my_word_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;danish&#39;</span><span class="p">,</span><span class="s1">&#39;cheesecake&#39;</span><span class="p">,</span><span class="s1">&#39;sugar&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Lollipop&#39;</span><span class="p">,</span><span class="s1">&#39;wafer&#39;</span><span class="p">,</span><span class="s1">&#39;Gummies&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;sesame&#39;</span><span class="p">,</span><span class="s1">&#39;Jelly&#39;</span><span class="p">,</span><span class="s1">&#39;beans&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;pie&#39;</span><span class="p">,</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="s1">&#39;Ice&#39;</span><span class="p">,</span><span class="s1">&#39;oat&#39;</span> <span class="p">]</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">sentence</span><span class="p">())</span>
-    <span class="c1"># &#39;Expedita at beatae voluptatibus nulla omnis.&#39;</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="n">ext_word_list</span><span class="o">=</span><span class="n">my_word_list</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">startpy</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Provide …</code></pre></div><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://stevesanjay.github.io/pynotes/lorem-ipsum.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 8 of 13</h6>
+<h6 class="subheader">Page 8 of 14</h6>
 
 <p>
             <a href="https://stevesanjay.github.io/pynotes/index7.html">&laquo; Prev</a>
@@ -552,6 +486,7 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basic-pandas.html">basic-pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
@@ -564,14 +499,17 @@
             <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/method.html">method</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/resquest-basic.html">resquest-basic</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/type-module.html">type-module</a></li>
    
         </ul>
 

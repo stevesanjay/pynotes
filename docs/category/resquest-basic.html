@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Python Notes - resquest-basic</title>
+
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://stevesanjay.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://stevesanjay.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://stevesanjay.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="https://stevesanjay.github.io/pynotes/main.html"><h3 class="article-title">Main</h3></a>
+<h6 class="subheader" title="2025-01-30T00:00:00-05:00">Thu 30 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://randomuser.me/api/&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">response</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Response [200]&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">response_json</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">{</span><span class="s1">&#39;results&#39;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">{&#39;gender&#39;: &#39;female&#39;,</span>
+<span class="n">   &#39;name&#39;: {&#39;title&#39;: &#39;Ms&#39;, &#39;first&#39;: &#39;Madlen&#39;, &#39;last&#39;: &#39;Hettich&#39;},</span>
+<span class="n">   &#39;location&#39;: {&#39;street&#39;: {&#39;number&#39;: 3512, &#39;name&#39;: &#39;Jahnstraße&#39;},</span>
+<span class="n">    &#39;city&#39;: &#39;Buckow (Märkische Schweiz)&#39;,</span>
+<span class="n">    &#39;state&#39;: &#39;Bayern&#39;,</span>
+<span class="n">    &#39;country&#39;: &#39;Germany&#39;,</span>
+<span class="n">    &#39;postcode&#39;: 92330,</span>
+<span class="n">    &#39;coordinates&#39;: {&#39;latitude&#39;: &#39;-49.1783&#39;, &#39;longitude&#39;: &#39;26.2957&#39;},</span>
+<span class="n">    &#39;timezone&#39;: {&#39;offset&#39;: &#39;+10:00&#39;,</span>
+<span class="n">     &#39;description&#39;: &#39;Eastern Australia, Guam, Vladivostok&#39;}},</span>
+<span class="n">   &#39;email&#39;: &#39;madlen.hettich@example.com&#39;,</span>
+<span class="n">   &#39;login&#39;: {&#39;uuid&#39;: &#39;a5af5721-efdd-439f-bff4-7a0f058a1533&#39;,</span>
+<span class="n">    &#39;username&#39;: &#39;crazykoala669&#39;,</span>
+<span class="n">    &#39;password&#39;: &#39;zander&#39;,</span>
+<span class="n">    &#39;salt&#39;: &#39;9YZoK9T7&#39;,</span>
+<span class="n">    &#39;md5&#39;: &#39;8997fb783bdc8e5a2aab49e6b24531d9&#39;,</span>
+<span class="n">    &#39;sha1&#39;: &#39;fc7ecb3d611effa5243e9e39836ddffca73fe320&#39;,</span>
+<span class="n">    &#39;sha256&#39;: &#39;2476c2301967393eb03de9f79a23af26985510ff586d43b4285cc328c4af34df&#39;},</span>
+<span class="n">   &#39;dob&#39;: {&#39;date&#39;: &#39;1944-10-21T18:16:15.911Z&#39;, &#39;age&#39;: 80},</span>
+<span class="n">   &#39;registered&#39;: {&#39;date&#39;: &#39;2021-09-20T15:49:47.687Z&#39;, &#39;age&#39;: 3},</span>
+<span class="n">   &#39;phone&#39;: &#39;0356-0312722&#39;,</span>
+<span class="n">   &#39;cell&#39;: &#39;0179-3581641&#39;,</span>
+<span class="n">   &#39;id&#39;: {&#39;name&#39;: &#39;SVNR&#39;, &#39;value&#39;: &#39;50 211044 H 784&#39;},</span>
+<span class="n">   &#39;picture&#39;: {&#39;large&#39;: &#39;https://randomuser.me/api/portraits/women/1.jpg&#39;,</span>
+<span class="n">    &#39;medium&#39;: &#39;https://randomuser.me/api/portraits/med/women/1.jpg&#39;,</span>
+<span class="n">    &#39;thumbnail&#39;: &#39;https://randomuser.me/api/portraits/thumb/women/1.jpg&#39;},</span>
+<span class="n">   &#39;nat&#39;: &#39;DE&#39;}</span><span class="o">]</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;seed&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;7ff1574d980e5774&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;results&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;page&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;version&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;1.4&#39;</span><span class="err">}}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_first_item</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_first_item</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">{</span><span class="s1">&#39;gender&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;female&#39;</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;title&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Ms&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;first&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Madlen&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;last&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Hettich&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;location&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;street&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;number&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">3512</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Jahnstraße&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;city&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Buckow (Märkische Schweiz)&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;state&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Bayern&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;country&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;postcode&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">92330</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;coordinates&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;latitude&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;-49.1783&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;longitude&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;26.2957&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;timezone&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;offset&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;+10:00&#39;</span><span class="p">,</span>
+<span class="w">   </span><span class="s1">&#39;description&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;Eastern Australia, Guam, Vladivostok&#39;</span><span class="err">}}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;email&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;madlen.hettich@example.com&#39;</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;login&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;uuid&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;a5af5721-efdd-439f-bff4-7a0f058a1533&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;username&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;crazykoala669&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;password&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;zander&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;salt&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;9YZoK9T7&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;md5&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;8997fb783bdc8e5a2aab49e6b24531d9&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;sha1&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;fc7ecb3d611effa5243e9e39836ddffca73fe320&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;sha256&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;2476c2301967393eb03de9f79a23af26985510ff586d43b4285cc328c4af34df&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;dob&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;date&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;1944-10-21T18:16:15.911Z&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;age&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">80</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;registered&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;date&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;2021-09-20T15:49:47.687Z&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;age&#39;</span><span class="err">:</span><span class="w"> </span><span class="mi">3</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;phone&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;0356-0312722&#39;</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;cell&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;0179-3581641&#39;</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;name&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;SVNR&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;50 211044 H 784&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;picture&#39;</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;large&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;https://randomuser.me/api/portraits/women/1.jpg&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;medium&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;https://randomuser.me/api/portraits/med/women/1.jpg&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;thumbnail&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;https://randomuser.me/api/portraits/thumb/women/1.jpg&#39;</span><span class="err">}</span><span class="p">,</span>
+<span class="w"> </span><span class="s1">&#39;nat&#39;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;DE&#39;</span><span class="err">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_country</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">,{})</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_country</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;Germany&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_timezone</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;timezone&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;offset&quot;</span><span class="p">,{})</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_timezone</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;+10:00&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_password</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,{})</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_password</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;zander&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_age</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dob&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,{})</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result_age</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">80</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_user_details</span><span class="p">(</span><span class="n">response_json</span><span class="p">):</span>
+    <span class="n">result_first_item</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">user_country</span>  <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">,{})</span>
+    <span class="n">user_timezone</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;timezone&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;offset&quot;</span><span class="p">,{})</span>
+    <span class="n">user_password</span> <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,{})</span>
+    <span class="n">user_age</span>      <span class="o">=</span> <span class="n">result_first_item</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dob&quot;</span><span class="p">,{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,{})</span>
+
+    <span class="n">result_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;country&quot;</span>  <span class="p">:</span> <span class="n">user_country</span><span class="p">,</span>
+        <span class="s2">&quot;timezone&quot;</span> <span class="p">:</span> <span class="n">user_timezone</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span> <span class="p">:</span> <span class="n">user_password</span><span class="p">,</span>
+        <span class="s2">&quot;age&quot;</span>      <span class="p">:</span> <span class="n">user_age</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result_dict</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">res</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://randomuser.me/api/&quot;</span><span class="p">)</span>
+<span class="n">get_user_details</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;country&#39;: &#39;New Zealand&#39;,
+ &#39;timezone&#39;: &#39;+6:00&#39;,
+ &#39;password&#39;: &#39;viewer&#39;,
+ &#39;age&#39;: 65}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p><p class="subheader">Category: <a href="https://stevesanjay.github.io/pynotes/category/resquest-basic.html">resquest-basic</a>
+
+</p>
+
+
+
+            </article>
+
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
+</div>
+
+
+
+            <!-- /#posts-list -->
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://stevesanjay.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://stevesanjay.github.io/pynotes/category/age-calculator.html">age-calculator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/ai.html">ai</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/args-work.html">args-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basic-pandas.html">basic-pandas</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/beautiful-soup.html">beautiful-soup</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/cricket-work.html">cricket-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/enum.html">enum</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/exception-work.html">exception-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/faker-work.html">faker-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/for-loop-work.html">for-loop-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/function-work.html">function-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/game.html">game</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/lambda.html">lambda</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/magicattr.html">magicattr</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/matplotlib.html">Matplotlib</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/method.html">method</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/namegenerator.html">namegenerator</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas.html">pandas</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-basic.html">python-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/python-location.html">python-location</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/regex.html">regex</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/resquest-basic.html">resquest-basic</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/selenium.html">selenium</a></li>
+            <li><a href="https://stevesanjay.github.io/pynotes/category/type-module.html">type-module</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/stevesanjay/">GitHub</a></li>
+            <li><a href="steve-sanjay-942a32275">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by steve sanjay</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
